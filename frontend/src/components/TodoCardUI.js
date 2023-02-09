@@ -22,7 +22,7 @@ const TodoCardUI = () => {
         <div>
             <WelcomeUI />
             <div>Tasks to do</div>
-            <div className='flex flex-col space-y-3 w-[450px] mt-5  border px-2 py-2'>
+            <div className='flex flex-col space-y-3 md:w-[450px] w-[300px] mt-5  border px-2 py-2'>
                 <AddTasks tasks={tasks} setTasks={setTasks} />
 
                 {
