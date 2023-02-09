@@ -1,6 +1,6 @@
 import React from 'react'
 
-function WelcomeUI() {
+function WelcomText() {
     return (
         <div className='py-5 text-2xl'>
             <div>Welcome, team Decentral</div>
@@ -9,4 +9,4 @@ function WelcomeUI() {
     )
 }
 
-export default WelcomeUI
+export default WelcomText

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { getTodo } from '../services/todoService'
 import AddTasks from './AddTasks'
-import Tasks from './Tasks'
-import WelcomeUI from './WelcomeUI'
+import TaskList from './TaskList'
+import WelcomText from './WelcomText'
 
-const TodoCardUI = () => {
+const TodoLayout = () => {
 
     const [tasks, setTasks] = useState([])
     useEffect(() => {
@@ -20,7 +20,7 @@ const TodoCardUI = () => {
 
     return (
         <div>
-            <WelcomeUI />
+            <WelcomText />
             <div>Tasks to do</div>
             <div className='flex flex-col space-y-3 md:w-[450px] w-[300px] mt-5  border px-2 py-2'>
                 <AddTasks tasks={tasks} setTasks={setTasks} />
@@ -29,7 +29,7 @@ const TodoCardUI = () => {
                     tasks.length > 0 && tasks.map((task, index) => {
                         return (
                             <div key={index}>
-                                <Tasks task={task} setTasks={setTasks} />
+                                <TaskList task={task} setTasks={setTasks} />
                             </div>
                         )
                     })
@@ -40,4 +40,4 @@ const TodoCardUI = () => {
     )
 }
 
-export default TodoCardUI
+export default TodoLayout

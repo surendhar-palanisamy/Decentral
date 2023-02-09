@@ -1,7 +1,7 @@
 import React from 'react'
 import { deleteTodo, updateTodo } from '../services/todoService'
 
-function Tasks({ task, setTasks }) {
+function TaskList({ task, setTasks }) {
     return (
         <div className='flex   border items-center justify-between py-3 px-3'>
             <div className=''>
@@ -39,4 +39,4 @@ function Tasks({ task, setTasks }) {
     )
 }
 
-export default Tasks
+export default TaskList
