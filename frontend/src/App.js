@@ -1,14 +1,13 @@
 import './App.css';
 import TodoCardUI from './components/TodoCardUI';
-import WelcomeUI from './components/WelcomeUI';
+
 
 function App() {
   return (
-    <div className='grid place-items-center pt-28 '>
+    <div className='min-h-screen grid place-items-center bg-gradient-to-r  from-teal-50 via-purple-50 to-pink-50'>
       <TodoCardUI />
     </div>
   );
 }
 
 export default App;
-// className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 '
