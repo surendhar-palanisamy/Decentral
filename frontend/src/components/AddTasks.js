@@ -10,18 +10,21 @@ function AddTasks({ tasks, setTasks }) {
                     value={input}
                     onChange={(e) => { setInput(e.target.value) }}
                     className=' bg-gradient-to-r  from-teal-50 via-purple-50 to-pink-50 focus:outline-none  w-full'
-                    placeholder='Add a Task' />
+                    data-testid='task-input'
+                />
             </div>
-            <svg onClick={() => {
-                if (input !== '') {
-                    addTodo(input)
-                        .then((res) => {
-                            setTasks([...tasks, res])
-                            setInput('')
-                        })
+            <svg
+                onClick={() => {
+                    if (input !== '') {
+                        addTodo(input)
+                            .then((res) => {
+                                setTasks([...tasks, res])
+                                setInput('')
+                            })
 
-                }
-            }}
+                    }
+                }}
+                data-testid='add-button'
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"

@@ -22,19 +22,9 @@ const TodoLayout = () => {
         <div>
             <WelcomText />
             <div>Tasks to do</div>
-            <div className='flex flex-col space-y-3 md:w-[450px] w-[300px] mt-5  border px-2 py-2'>
+            <div className='flex flex-col  space-y-3 md:w-[450px] w-[300px] mt-5  border px-2 py-2'>
                 <AddTasks tasks={tasks} setTasks={setTasks} />
-
-                {
-                    tasks.length > 0 && tasks.map((task, index) => {
-                        return (
-                            <div key={index}>
-                                <TaskList task={task} setTasks={setTasks} />
-                            </div>
-                        )
-                    })
-
-                }
+                <TaskList tasks={tasks} setTasks={setTasks} />
             </div>
         </div>
     )
