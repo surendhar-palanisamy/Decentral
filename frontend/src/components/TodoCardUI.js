@@ -23,13 +23,13 @@ const TodoCardUI = () => {
             <WelcomeUI />
             <div>Tasks to do</div>
             <div className='flex flex-col space-y-3 w-[450px] mt-5  border px-2 py-2'>
-                <AddTasks />
+                <AddTasks tasks={tasks} setTasks={setTasks} />
 
                 {
-                    tasks.length > 0 && tasks.map((task) => {
+                    tasks.length > 0 && tasks.map((task, index) => {
                         return (
-                            <div key={task._id}>
-                                <Tasks task={task} />
+                            <div key={index}>
+                                <Tasks task={task} setTasks={setTasks} />
                             </div>
                         )
                     })

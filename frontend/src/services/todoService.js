@@ -10,7 +10,6 @@ export const getTodo = async () => {
 
 
 export const addTodo = async (todo) => {
-    console.log(todo)
     const fetched_data = await fetch(`${REACT_APP_API_URL}/todo`, {
         method: "POST",
         body: JSON.stringify({
@@ -20,6 +19,22 @@ export const addTodo = async (todo) => {
             "Content-type": "application/json; charset=UTF-8"
         }
     })
+    const json_data = await fetched_data.json()
+    return json_data
+
+}
+
+
+
+export const deleteTodo = async (id) => {
+    const fetched_data = await fetch(`${REACT_APP_API_URL}/todo/${id}`, { method: "DELETE" })
+    const json_data = await fetched_data.json()
+    return json_data
+
+}
+
+export const updateTodo = async (id) => {
+    const fetched_data = await fetch(`${REACT_APP_API_URL}/todo/${id}`, { method: "PUT" })
     const json_data = await fetched_data.json()
     return json_data
 
