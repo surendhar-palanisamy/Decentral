@@ -54,7 +54,7 @@ test('renders TaskList Component', () => {
     const deleteButton = screen.getAllByTestId('delete-button')[0]
     expect(deleteButton).toBeInTheDocument()
 
-    //Check line-through exsists if completed
+    //Check tasks passed and  line-through exsists if completed
     const completedTask = screen.getByText(/Create a Pitch Deck/)
     expect(completedTask.classList.contains('line-through')).toBe(true)
 
@@ -64,6 +64,3 @@ test('renders TaskList Component', () => {
 
 
 });
-
-
-test('renders ')

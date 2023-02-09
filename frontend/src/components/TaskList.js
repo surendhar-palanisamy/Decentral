@@ -8,7 +8,7 @@ function TaskList({ tasks, setTasks }) {
             {tasks.length > 0 &&
                 tasks.map((task) => {
                     return (
-                        <div className='flex   border items-center justify-between py-3 px-3'>
+                        <div key={task._id} className='flex   border items-center justify-between py-3 px-3'>
                             <div className=''>
                                 <div
                                     onClick={() => {
